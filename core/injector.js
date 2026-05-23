@@ -16,7 +16,7 @@
     highShelfDb: 10,
     limiterDb: -0.1,
     drive: 1.0,
-    loudness: 10.0,
+    loudness: 200000,
     maxBoost: 200000,
     antiDuckSustain: true,
     rawMicConstraintLock: true,
