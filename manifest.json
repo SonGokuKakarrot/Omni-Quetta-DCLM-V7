@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Omni Dc Lord V7",
+  "short_name": "ODL V7",
+  "version": "3.0.0",
+  "description": "Discord Web voice-channel microphone maximizer for Android extension browsers, with page-context WebRTC hooks, live DSP controls, and a polished control panel.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://discord.com/*",
+    "https://*.discord.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://discord.com/*",
+        "https://*.discord.com/*"
+      ],
+      "js": ["content/loader.js", "content/service.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "web_accessible_resources": [
+    "core/injector.js"
+  ],
+  "browser_action": {
+    "default_title": "Omni Dc Lord V7",
+    "default_popup": "popup/popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "omni-dc-lord@example.com",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
+    }
+  }
+}
