@@ -4,7 +4,7 @@ const HAS_PROMISE_API = typeof globalThis.browser !== "undefined" && EXT === glo
 const DEFAULTS = {
   enabled: true,
   gainDb: 60,
-  loudness: 10.0,
+  loudness: 200000,
   maxBoost: 200000,
   antiDuckSustain: true,
   rawMicConstraintLock: true,
@@ -23,7 +23,7 @@ const PRESETS = {
   royal: {
     enabled: true,
     gainDb: 24,
-    loudness: 4,
+    loudness: 120000,
     maxBoost: 200000,
     antiDuckSustain: true,
     rawMicConstraintLock: true,
@@ -40,7 +40,7 @@ const PRESETS = {
   lord: {
     enabled: true,
     gainDb: 60,
-    loudness: 10,
+    loudness: 200000,
     maxBoost: 200000,
     antiDuckSustain: true,
     rawMicConstraintLock: true,
